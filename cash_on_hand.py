@@ -21,6 +21,6 @@ def coh():
             deficit = True
         first = list_coh[x+1]
     if deficit == False:
-        days_deficit.append(f"[CASH ON HAND SURPLUS] CASH ON HAND FOR EACH DAY IS HIGHER THAN THE PREVIOUS DAY.")
+        days_deficit.append(f"[CASH ON HAND SURPLUS] CASH ON HAND FOR EACH DAY IS HIGHER THAN THE PREVIOUS DAY.\n")
     return days_deficit
 print(coh())
