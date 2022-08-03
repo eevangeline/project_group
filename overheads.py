@@ -6,6 +6,7 @@ try:
 #exception handling for import error in case we change name of keyword or have typos
 except ImportError:
     print(f"Import keyword not found! Please check keyword.")
+#creating lists to append extracted data into
 list_overheads = []
 list_values = []
 try:
@@ -41,7 +42,7 @@ def overheads():
     #using .index() function to extract the index value of the largest overhead value
         index = list_values.index(max(list_values))
         #return statement made to write into summary report easily
-        return f"{list_overheads[index]}: SGD{round(list_values[index],1)}"
+        return f"[HIGHEST OVERHEADS] {list_overheads[index]}: SGD{round(list_values[index],1)}"
     #exception handling for index in case index value from above is wrong
     except IndexError:
         print(f"Index sequence out of range. Check index value above! ")

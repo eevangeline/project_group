@@ -6,6 +6,7 @@ try:
 #exception handling for import error in case we change name of keyword or have typos
 except ImportError:
     print(f"Import keyword not found! Please check keyword.")
+#creating lists to append extracted data into
 list_coh = []
 list_days = []
 try:
@@ -49,4 +50,3 @@ def coh():
     if deficit == False:
         days_deficit.append(f"[CASH ON HAND SURPLUS] CASH ON HAND FOR EACH DAY IS HIGHER THAN THE PREVIOUS DAY.\n")
     return days_deficit
-print(coh())

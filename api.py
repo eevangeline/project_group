@@ -9,4 +9,3 @@ response = r.json()
 exchange_rate = float(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
 #creating statement for use when writing summary report
 statement = f"[REAL TIME CURRENCY CONVERSION RATE] USD1 = SGD{exchange_rate}"
-print(statement)

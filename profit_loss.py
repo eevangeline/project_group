@@ -6,6 +6,7 @@ try:
 #exception handling for import error in case we change name of keyword or have typos
 except ImportError:
     print(f"Import keyword not found! Please check keyword.")
+#creating lists to append extracted data into
 list_profitnloss = []
 list_days = []
 try:
@@ -42,11 +43,10 @@ def profitnloss():
     for x in range(len(list_profitnloss)-1):
         diff = list_profitnloss[x+1]-first
         if diff <0:
-            days_deficit.append(f"[PROFIT DEFICIT] DAY: {list_days[x+1]}, AMOUNT: SGD{round(abs(diff),1)}")
+            days_deficit.append(f"[PROFIT DEFICIT] DAY: {list_days[x+1]}, AMOUNT: SGD{round(abs(diff),1)}\n")
             #set deficit to True to stop the loop
             deficit = True
         first = list_profitnloss[x+1]
     if deficit == False:
-        days_deficit.append(f"[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY.")
+        days_deficit.append(f"[NET PROFIT SURPLUS] NET PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY.\n")
     return days_deficit
-print(profitnloss())

@@ -1,4 +1,5 @@
 try:
+#importing necessary functions and strings for summary report writing
     from api import statement
     from cash_on_hand import coh
     from profit_loss import profitnloss
@@ -12,9 +13,6 @@ fp = Path.cwd()/"summary_report.txt"
 #creating text file to write summary report into
 fp.touch()
 #opening file to write summary report using write mode
-print(fp.exists())
-for data in coh():
-    word = data
 with fp.open(mode = "w", encoding="UTF-8") as file:
     file.write(f"{statement}\n{overheads()}\n")
     file.writelines(coh())
